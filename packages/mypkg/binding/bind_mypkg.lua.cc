@@ -17,5 +17,6 @@ using namespace Example;
 {
   AprilUtils::SharedPtr<Basics::MatrixFloat> m3 = Example::get();
   AprilUtils::LuaTable::pushInto(L, m3.get());
+  LUABIND_INCREASE_NUM_RETURNS(1);
 }
 //BIND_END
