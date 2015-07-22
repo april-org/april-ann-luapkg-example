@@ -1,5 +1,5 @@
 //BIND_HEADER_H
-#include "example.h"
+#include "mypkg.h"
 //BIND_END
 
 //BIND_HEADER_C

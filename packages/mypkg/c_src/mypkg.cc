@@ -1,4 +1,5 @@
 #include "april-ann.h" // includes all APRIL-ANN headers
+#include "mypkg.h" // from example
 
 using namespace AprilMath::MatrixExt::BLAS;
 using namespace AprilMath::MatrixExt::Initializers;
