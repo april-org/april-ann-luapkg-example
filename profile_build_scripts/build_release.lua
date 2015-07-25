@@ -22,14 +22,14 @@ luapkg{
       "-fopenmp",
       assert(io.popen("pkg-config --cflags april-ann"):read("*l")),
     },
-    -- extra_libs={
-    -- },
+    extra_libs={
+      "-fopenmp",
+      assert(io.popen("pkg-config --libs april-ann"):read("*l")),
+    },
     shared_extra_libs={
       "-fPIC",
       "-rdynamic",
       "-shared",
-      "-fopenmp",
-      assert(io.popen("pkg-config --libs april-ann"):read("*l")),
     },
   },
   
