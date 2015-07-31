@@ -7,12 +7,6 @@
 using namespace Example;
 //BIND_HEADER_C
 
-//BIND_STATIC_CONSTRUCTOR utils_static_constructor
-{
-  luaL_requiref(L, "aprilann", luaopen_aprilann, 1);
-}
-//BIND_END
-
 //BIND_FUNCTION mypkg.get
 {
   AprilUtils::SharedPtr<Basics::MatrixFloat> m3 = Example::get();
