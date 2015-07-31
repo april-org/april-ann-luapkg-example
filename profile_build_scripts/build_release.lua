@@ -1,5 +1,5 @@
 dofile("luapkg/formiga.lua")
-local postprocess = dofile("profile_build_scripts/postprocess.lua")
+local postprocess = dofile("luapkg/postprocess.lua")
 formiga.build_dir = "build_release"
 
 local packages = dofile "profile_build_scripts/package_list.lua"
@@ -22,14 +22,14 @@ luapkg{
       "-fopenmp",
       assert(io.popen("pkg-config --cflags april-ann"):read("*l")),
     },
-    -- extra_libs={
-    -- },
+    extra_libs={
+      "-fopenmp",
+      assert(io.popen("pkg-config --libs april-ann"):read("*l")),
+    },
     shared_extra_libs={
       "-fPIC",
       "-rdynamic",
       "-shared",
-      "-fopenmp",
-      assert(io.popen("pkg-config --libs april-ann"):read("*l")),
     },
   },
   
